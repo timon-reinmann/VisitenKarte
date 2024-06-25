@@ -1,0 +1,179 @@
+@font-face {
+  font-family: "nunito-regular";
+  src: url(/font/Nunito-Regular.ttf);
+}
+
+body {
+  background-color: rgba(249, 241, 254);
+  font-family: "nunito-regular";
+  background: url(../img/background.webp) no-repeat center fixed;
+  background-size: cover;
+  color: rgba(249, 241, 254);
+}
+
+.wrapper {
+  position: relative;
+  width: 60%;
+  max-width: 920px;
+  height: 70%;
+  background: rgba(249, 241, 254, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(88, 42, 114, 0.5);
+  box-shadow: 0 0 3px rgba(38, 5, 57, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transform-origin: left top;
+  transform: scale(1) translate(-50%, -50%);
+  transition: transform 0.5s ease, height 0.2s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  user-select: none;
+}
+
+.wrapper.active {
+  height: 440px;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.wrapper .form-box {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper .form-box.business-card {
+  transition: transform.18s ease;
+  transform: translateX(0);
+}
+
+.wrapper.active .form-box.business-card {
+  transition: none;
+  transform: translateX(-900px);
+}
+
+.wrapper .form-box.steckbrief {
+  position: absolute;
+  transition: none;
+  transform: translateX(900px);
+}
+
+.wrapper.active .form-box.steckbrief {
+  transition: transform.18s ease;
+  transform: translateX(0);
+}
+
+.wrapper .icon-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  background: #162938;
+  font-size: 2em;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.email-title {
+  font-size: 2em;
+  color: #162938;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn {
+  width: 40%;
+  height: 45px;
+  background: #162938;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #fff;
+  font-weight: 500;
+  position: absolute;
+  left: 50%;
+  bottom: 25%;
+  transform: translate(-50%, -50%);
+  border: #fff 1px solid;
+}
+
+.link:hover {
+  color: rgba(88, 42, 114);
+}
+
+.email-input {
+  position: absolute;
+  inset: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  padding-left: 10px;
+  width: 50vw;
+  max-width: 600px;
+  min-height: 20px;
+}
+
+.profil-picture {
+  margin-top: 5%;
+  margin-left: 5%;
+  border-radius: 10%;
+  border: 2px solid rgba(249, 241, 254, 0.5);
+  box-shadow: 0 0 3px rgba(38, 5, 57, 0.5);
+  position: absolute;
+  height: 200px;
+  width: 150px;
+}
+
+.name {
+  font-size: 2em;
+  position: relative;
+}
+
+.link {
+  font-size: 1.5em;
+  position: relative;
+  color: rgba(149, 112, 170);
+  text-decoration: none;
+}
+
+.business-card-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30%;
+  margin-top: 4%;
+}
+
+.steckbrief {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  margin-top: 4%;
+}
+
+.back-link {
+  font-size: 1.5em;
+  position: relative;
+  color: rgba(149, 112, 170);
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: rgba(88, 42, 114);
+}
