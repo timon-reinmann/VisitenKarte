@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "nunito-regular";
+  src: url(/font/Nunito-Regular.ttf);
+}
+
+body {
+  background-color: rgba(249, 241, 254);
+  font-family: "nunito-regular";
+  background: url(../img/background.webp) no-repeat center fixed;
+  background-size: cover;
+  color: rgba(249, 241, 254);
+}
+
+.wrapper {
+  position: relative;
+  width: 60%;
+  max-width: 920px;
+  height: 70%;
+  background: rgba(249, 241, 254, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 2px solid rgba(88, 42, 114, 0.5);
+  box-shadow: 0 0 3px rgba(38, 5, 57, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transform-origin: left top;
+  transform: scale(1) translate(-50%, -50%);
+  transition: transform 0.5s ease, height 0.2s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  user-select: none;
+}
+
+.wrapper.active {
+  height: 440px;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.wrapper .form-box {
+  width: 100%;
+  height: 100%;
+}

@@ -19,6 +19,7 @@ body {
   background: rgba(249, 241, 254, 0.2);
   border-radius: 20px;
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 2px solid rgba(88, 42, 114, 0.5);
   box-shadow: 0 0 3px rgba(38, 5, 57, 0.5);
   display: flex;
@@ -176,4 +177,23 @@ body {
 
 .back-link:hover {
   color: rgba(88, 42, 114);
+}
+
+.feedback-link {
+  font-size: 1.5em;
+  position: relative;
+  color: rgba(149, 112, 170);
+  text-decoration: none;
+}
+
+.feedback-link:hover {
+  color: rgba(88, 42, 114);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  margin: 5px 0;
 }
