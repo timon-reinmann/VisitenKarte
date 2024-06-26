@@ -3,79 +3,57 @@
   src: url(../font/Nunito-Regular.ttf);
 }
 
+html,
 body {
-  padding: 0;
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
   margin: 0;
-  background-color: floralwhite;
+  padding: 0;
 }
 
-h1 {
-  margin-top: 50px;
-  margin-left: 510px;
-  font-size: 60px;
-  font-family: "nunito-regular";
-  font-weight: lighter;
+.swiper {
+  width: 100%;
+  height: 100%;
+  background: #000;
 }
 
-.slider-frame {
-  overflow: hidden;
-  height: 800px;
-  width: 1200px;
-  margin-left: 360px;
-  margin-top: 20px;
+.swiper-slide {
+  font-size: 18px;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 40px 60px;
 }
 
-@-webkit-keyframes slide_animation {
-  0% {
-    left: 0px;
-  }
-  10% {
-    left: 0px;
-  }
-  20% {
-    left: 1200px;
-  }
-  30% {
-    left: 1200px;
-  }
-  40% {
-    left: 2400px;
-  }
-  50% {
-    left: 2400px;
-  }
-  60% {
-    left: 1200px;
-  }
-  70% {
-    left: 1200px;
-  }
-  80% {
-    left: 0px;
-  }
-  90% {
-    left: 0px;
-  }
-  100% {
-    left: 0px;
-  }
+.parallax-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
 }
 
-.slider-images {
-  width: 3600px;
-  height: 800px;
-  margin: 0 0 0 -2400px;
-  position: relative;
-  -webkit-animation-name: slide_animation;
-  -webkit-animation-duration: 3s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-  -webkit-animation-play-state: running;
+.swiper-slide .title {
+  font-size: 41px;
+  font-weight: 300;
 }
 
-.img-container {
-  height: 800px;
-  width: 1200px;
-  position: relative;
-  float: left;
+.swiper-slide .subtitle {
+  font-size: 21px;
+}
+
+.swiper-slide .text {
+  font-size: 14px;
+  max-width: 400px;
+  line-height: 1.3;
 }
