@@ -190,6 +190,17 @@ body {
   color: rgba(88, 42, 114);
 }
 
+.gallery-link {
+  font-size: 1.5em;
+  position: relative;
+  color: rgba(149, 112, 170);
+  text-decoration: none;
+}
+
+.gallery-link:hover {
+  color: rgba(88, 42, 114);
+}
+
 ul {
   list-style-type: none;
   padding: 0;
