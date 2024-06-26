@@ -11,39 +11,67 @@ body {
   color: rgba(249, 241, 254);
 }
 
-.wrapper {
-  position: relative;
-  width: 60%;
-  max-width: 920px;
-  height: 70%;
+#feedback {
+  max-width: calc(100% - 4px); /* Padding is 2px on each side so -4px */
+  min-width: calc(100% - 4px);
+  height: 10rem;
+}
+
+.feedback-main {
+  position: absolute;
+  width: 40%;
+  height: fit-content;
+  max-height: 90vh;
+  inset: 50%;
+  padding: 3rem 5rem;
   background: rgba(249, 241, 254, 0.2);
   border-radius: 20px;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 2px solid rgba(88, 42, 114, 0.5);
   box-shadow: 0 0 3px rgba(38, 5, 57, 0.5);
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease-in-out;
+}
+
+.feedback-main__title {
+  text-align: center;
+}
+
+.feedback-main__form {
+  position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  transform-origin: left top;
-  transform: scale(1) translate(-50%, -50%);
-  transition: transform 0.5s ease, height 0.2s ease;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  user-select: none;
-}
-
-.wrapper.active {
-  height: 440px;
-  width: 700px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-}
-
-.wrapper .form-box {
-  width: 100%;
+  flex-direction: column;
   height: 100%;
+}
+
+.feedback-main__form-submit {
+  width: clamp(4rem, 10vw, 15rem);
+}
+
+.feedback-main__form-input {
+  margin: 0 0 5rem;
+}
+
+.feedback-main__form-label--important {
+  color: red;
+}
+
+.feedback-main__form-home {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: white;
+  text-decoration: none;
+}
+
+.feedback-main__form-home:hover {
+  color: grey;
+}
+
+@media screen and (width < 1024px) {
+  .feedback-main {
+    width: 60%;
+    padding: 3rem 2rem;
+  }
 }
