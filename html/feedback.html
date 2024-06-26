@@ -4,9 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../css/feedback.css-" />
+    <link rel="stylesheet" href="../css/feedback.css" />
   </head>
   <body>
+    <header></header>
+    <main class="feedback-main">
+      <h2 class="feedback-main__title">Feedback-Form</h2>
+      <form class="feedback-main__form" action="" method="POST">
+        <label for="name">Name: </label>
+        <input
+          class="feedback-main__form-input"
+          id="name"
+          type="text"
+          maxlength="50"
+          placeholder="Max Mustermann"
+        />
+
+        <label for="email"
+          >Email:<span class="feedback-main__form-label--important">*</span>
+        </label>
+        <input
+          class="feedback-main__form-input"
+          type="email"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+          placeholder="example@gmail.com"
+        />
+
+        <label for="feedback"
+          >Feedback:<span class="feedback-main__form-label--important"
+            >*</span
+          ></label
+        >
+        <textarea
+          class="feedback-main__form-input"
+          name="feedback"
+          id="feedback"
+          placeholder="Geben sie uns Ihr Feedback"
+        ></textarea>
+        <label for="rating">Bewerten Sie uns: </label>
+        <input id="range" type="range" min="0" max="5" step="0.5" />
+        <p>
+          Your Rating: <output id="output">2.5</output>
+          <i class="fa-solid fa-star"></i>
+        </p>
+
+        <input class="feedback-main__form-submit" type="submit" />
+
+        <a class="feedback-main__form-home" href="../index.html"
+          ><i class="fa-solid fa-left-to-line"></i> Home</a
+        >
+      </form>
+    </main>
+    <footer></footer>
     <script src="../js/feedback.js"></script>
+    <script
+      src="https://kit.fontawesome.com/d6df3707cf.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
