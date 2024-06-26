@@ -2,10 +2,17 @@
   "name": "visitenkarte",
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "author": "Timon",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^7.0.3",
+    "postcss": "^8.4.38"
+  },
+  "dependencies": {
+    "parcel": "^2.12.0"
+  }
 }

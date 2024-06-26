@@ -37,7 +37,8 @@ body {
 
 .wrapper.active {
   height: 440px;
-  width: 700px;
+  width: 80%;
+  max-width: 700px;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -49,11 +50,14 @@ body {
 }
 
 .wrapper .form-box.business-card {
+  display: flex;
+  flex-direction: row;
   transition: transform.18s ease;
   transform: translateX(0);
 }
 
 .wrapper.active .form-box.business-card {
+  display: flex;
   transition: none;
   transform: translateX(-900px);
 }
@@ -137,7 +141,7 @@ body {
   border-radius: 10%;
   border: 2px solid rgba(249, 241, 254, 0.5);
   box-shadow: 0 0 3px rgba(38, 5, 57, 0.5);
-  position: absolute;
+  position: relative;
   height: 200px;
   width: 150px;
 }
@@ -157,8 +161,7 @@ body {
 .business-card-text {
   display: flex;
   flex-direction: column;
-  margin-left: 30%;
-  margin-top: 4%;
+  padding: 5%;
 }
 
 .steckbrief {
@@ -207,4 +210,10 @@ ul {
 }
 li {
   margin: 5px 0;
+}
+
+@media only screen and (max-width: 992px) {
+  .wrapper .form-box.business-card {
+    flex-direction: column;
+  }
 }
